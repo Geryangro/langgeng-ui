@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link href="../../../dist/output.css" rel="stylesheet">
+</head>
+<body class="font-mulish">
+    <div class="container mx-auto">
+        <div
+          class="sidebar fixed h-screen w-80 py-4 overflow-y-auto bg-blackprimary"
+        >
+            <div class="flex flex-row items-center pl-5 mb-16">
+                <img src="../../../assets/logo.png" alt="logo" class="w-8 h-8">
+                <h6 class="ml-3 text-white text-xl">Langgeng</h6>
+            </div>
+            <div
+                id="menu"
+                class="mt-3 flex items-center px-4 py-[18px] duration-100 cursor-pointer hover:border-l-4 hover:bg-blacksecondary bg-blacksecondary text-white border-l-4 border-costumegrey"
+                onclick="dropdown()" >
+                <img src="../../../assets/overview.png" alt="overview" class="w-3.5 h-3.5">
+                <div class="flex justify-between w-full items-center">
+                <span class="text-[15px] ml-4 text-gray-200 font-bold">Langgeng</span>
+                <span class="text-sm rotate-180" id="arrow">
+                    <i class="bi bi-chevron-down"></i>
+                </span>
+                </div>
+            </div>
+            <div
+                class="text-left text-sm mt-2 mx-auto text-gray-200 font-bold"
+                id="submenu"
+            >   <div class="flex flex-row items-center cursor-pointer pl-12 py-4 border-l-4 border-blackprimary hover:border-l-4 hover:bg-blacksecondary hover:border-costumegrey ">
+                    <img src="../../../assets/contacts.png" alt="group" class="w-3.5 h-3.5">
+                    <h1 class="ml-6">Group List</h1>
+                </div>
+                <div class="flex flex-row items-center cursor-pointer pl-12 py-4 border-l-4 border-blackprimary hover:border-l-4 hover:bg-blacksecondary hover:border-costumegrey ">
+                    <img src="../../../assets/ideas.png" alt="tools" class="w-3.5 h-3.5">
+                    <h1 class="ml-6">Tools</h1>
+                </div>
+                <div class="flex flex-row items-center cursor-pointer pl-12 py-4 border-l-4 border-blackprimary hover:border-l-4 hover:bg-blacksecondary hover:border-costumegrey ">
+                    <img src="../../../assets/agents.png" alt="users" class="w-3.5 h-3.5">
+                    <h1 class="ml-6">Users</h1>
+                </div>
+                <div class="flex flex-row items-center cursor-pointer pl-12 py-4 border-l-4 border-blackprimary hover:border-l-4 hover:bg-blacksecondary hover:border-costumegrey ">
+                    <img src="../../../assets/articles.png" alt="articles" class="w-3.5 h-3.5">
+                    <h1 class="ml-6">Articles</h1>
+                </div>
+            </div>
+            <div
+                class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer border-costumegrey text-white"
+            >
+                <img src="../../../assets/settings.png" alt="settings" class="w-3.5 h-3.5">
+                <span class="text-[15px] ml-4 text-gray-200 font-bold">Settings</span>
+            </div>
+        </div>
+     
+        <div class="ml-80 bg-backgroundGrey h-screen py-10 px-8">
+            <div class="h-full rounded-md bg-white border border-costumegrey px-7 py-14 flex flex-col">
+                <h3 class="font-bold text-xl">Group List</h3>
+                <div class="flex justify-end">
+                    <a href="../login/index.html"> 
+                    <button class="py-1.5 px-4 bg-primary text-white rounded text-base">Create New Campaign</button>
+                </a>
+                </div>
+                <div class="mt-8 border rounded-lg">
+                    <div class="relative">
+                        <span class="icon-search">
+                            <i class="fa fa-search"></i>
+                        </span>
+                        <input class="my-6 border bg-white rounded-lg py-2 pr-4 pl-8 input mx-5 w-[300px]" type="text" id="email" name="email" placeholder="Search Campaign"/>
+                    </div>
+                    <table class="table-auto w-full">
+                        <thead class="border-b">
+                          <tr>
+                            <th class="text-left py-[25px] pl-5">ID</th>
+                            <th class="text-left py-[25px] pl-5">Campaign</th>
+                            <th class="text-left py-[25px] pl-5">Subscribers</th>
+                            <th class="text-left py-[25px] pl-5">Subscriber code</th>
+                            <th class="text-left py-[25px] pl-5">Unsubscriber code</th>
+                            <th class="text-left py-[25px] pl-5">Description</th>
+                            <th class="text-left py-[25px] pl-5">Status</th>
+                            <th class="text-left py-[25px] pl-5">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody >
+                          <tr class="border-t">
+                            <td class="text-left py-[25px] pl-5">01</td>
+                            <td class="text-left py-[25px] pl-5">Promo 12.12</td>
+                          </tr>
+                          <tr class="border-t">
+                            <td class="text-left py-[25px] pl-5">01</td>
+                            <td class="text-left py-[25px] pl-5">Promo 12.12</td>
+                          </tr>
+                          <tr class="border-t">
+                            <td class="text-left py-[25px] pl-5">01</td>
+                            <td class="text-left py-[25px] pl-5">Promo 12.12</td>
+                          </tr>
+                          <tr class="border-t">
+                            <td class="text-left py-[25px] pl-5">01</td>
+                            <td class="text-left py-[25px] pl-5">Promo 12.12</td>
+                          </tr>
+                          <tr class="border-t">
+                            <td class="text-left py-[25px] pl-5">01</td>
+                            <td class="text-left py-[25px] pl-5">Promo 12.12</td>
+                          </tr>
+                          <tr class="border-t">
+                            <td class="text-left py-[25px] pl-5">01</td>
+                            <td class="text-left py-[25px] pl-5">Promo 12.12</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+      </div>
+
+  <script type="text/javascript">
+    function dropdown() {
+        document.querySelector("#menu").classList.toggle("active");
+        document.querySelector("#submenu").classList.toggle("hidden");
+        document.querySelector("#arrow").classList.toggle("rotate-0");
+    }
+  </script>
+</body>
+</html>

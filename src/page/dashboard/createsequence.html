@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link href="../../../dist/output.css" rel="stylesheet">
+</head>
+<body class="font-mulish">
+    <div class="container mx-auto">
+        <div
+          class="sidebar fixed h-screen w-80 py-4 overflow-y-auto bg-blackprimary"
+        >
+            <div class="flex flex-row items-center pl-5 mb-16">
+                <img src="../../../assets/logo.png" alt="logo" class="w-8 h-8">
+                <h6 class="ml-3 text-white text-xl">Langgeng</h6>
+            </div>
+            <div
+                id="menu"
+                class="mt-3 flex items-center px-4 py-[18px] duration-100 cursor-pointer hover:border-l-4 hover:bg-blacksecondary bg-blacksecondary text-white border-l-4 border-costumegrey"
+                onclick="dropdown()" >
+                <img src="../../../assets/overview.png" alt="overview" class="w-3.5 h-3.5">
+                <div class="flex justify-between w-full items-center">
+                <span class="text-[15px] ml-4 text-gray-200 font-bold">Langgeng</span>
+                <span class="text-sm rotate-180" id="arrow">
+                    <i class="bi bi-chevron-down"></i>
+                </span>
+                </div>
+            </div>
+            <div
+                class="text-left text-sm mt-2 mx-auto text-gray-200 font-bold"
+                id="submenu"
+            >   <div class="flex flex-row items-center cursor-pointer pl-12 py-4 border-l-4 border-blackprimary hover:border-l-4 hover:bg-blacksecondary hover:border-costumegrey ">
+                    <img src="../../../assets/contacts.png" alt="group" class="w-3.5 h-3.5">
+                    <h1 class="ml-6">Group List</h1>
+                </div>
+                <div class="flex flex-row items-center cursor-pointer pl-12 py-4 border-l-4 border-blackprimary hover:border-l-4 hover:bg-blacksecondary hover:border-costumegrey ">
+                    <img src="../../../assets/ideas.png" alt="tools" class="w-3.5 h-3.5">
+                    <h1 class="ml-6">Tools</h1>
+                </div>
+                <div class="flex flex-row items-center cursor-pointer pl-12 py-4 border-l-4 border-blackprimary hover:border-l-4 hover:bg-blacksecondary hover:border-costumegrey ">
+                    <img src="../../../assets/agents.png" alt="users" class="w-3.5 h-3.5">
+                    <h1 class="ml-6">Users</h1>
+                </div>
+                <div class="flex flex-row items-center cursor-pointer pl-12 py-4 border-l-4 border-blackprimary hover:border-l-4 hover:bg-blacksecondary hover:border-costumegrey ">
+                    <img src="../../../assets/articles.png" alt="articles" class="w-3.5 h-3.5">
+                    <h1 class="ml-6">Articles</h1>
+                </div>
+            </div>
+            <div
+                class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer border-costumegrey text-white"
+            >
+                <img src="../../../assets/settings.png" alt="settings" class="w-3.5 h-3.5">
+                <span class="text-[15px] ml-4 text-gray-200 font-bold">Settings</span>
+            </div>
+        </div>
+     
+        <div class="ml-80 bg-backgroundGrey h-screen py-10 px-8">
+            <div class="h-full rounded-md flex flex-col justify-between bg-white border border-costumegrey px-[132px] py-14">
+                <div class="flex flex-row justify-between">
+                    <div class="text-center w-full px-4">
+                        <span class="text-xl">Select Campaign Type</span>
+                        <div class="mt-3 flex flex-row items-center">
+                            <div class="circle text-white bg-primary mr-4">1</div>
+                            <div class="w-full h-[4px] bg-primary"></div>
+                        </div>
+                    </div>
+                    <div class="text-center w-full px-4">
+                        <span class="text-xl">Create Campaign</span>
+                        <div class="mt-3 flex flex-row items-center">
+                            <div class="circle text-white mr-4 bg-primary">2</div>
+                            <div class="w-full h-[4px] bg-primary"></div>
+                        </div>
+                    </div>
+                    <div class="text-center w-full px-4">
+                        <span class="text-xl">Create Sequence</span>
+                        <div class="mt-3 flex flex-row items-center">
+                            <div class="circle text-white mr-4 bg-primary">3</div>
+                            <div class="w-full h-[4px] bg-primary"></div>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+               <div class="flex flex-col justify-between h-full">
+                <div class="mt-8 flex flex-row space-x-40 justify-between">
+                    <div class="flex flex-col w-full">
+                        <div class="flex flex-col w-full">
+                            <label for="" class="uppercase text-costumeblack font-bold text-xs">Title</label>
+                            <select name="cars" id="cars" class="bg-backgroundGreyThird mt-2 py-3 px-4 border rounded-lg select-class ">
+                                <option value="Promo 12.12" class="p-2">Promo 12.12</option>
+                                <option value="Rahmadan Sale">Rahmadan Sale</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col mt-5 w-full">
+                            <label for="" class="uppercase text-costumeblack font-bold text-xs">Content</label>
+                            <input class="border bg-backgroundGreyThird rounded-lg mt-2 py-3 px-4 input" type="text" id="email" name="email" placeholder="Type here"/>
+                        </div>
+                        <div class="flex flex-col mt-5 w-full">
+                            <label for="" class="uppercase text-costumeblack font-bold text-xs">Image file upload</label>
+                            <div class="border border-dashed w-full h-[183px] mt-2 bg-backgroundGreyThird rounded-lg py-3 px-4 flex flex-col items-center justify-center">
+                                <img src="../../../assets/camera.png" alt="settings" class="w-7 h-7">
+                            </div>
+                            <button class="mt-4 border text-secondary py-1 text-center w-[130px] inline-block text-xs uppercase">
+                               Add more image
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-full">
+                        <div class="flex flex-col mt-5 w-full">
+                            <h3 class="text-xl font-bold">Delay</h3>
+                            <span class="text-sm text-textSubMenu">Lorem Ipsum is simply dummy text of the printing.</span>
+                        </div>
+                         
+                        <div class="flex flex-col mt-5 w-full">
+                            <label for="" class="uppercase text-costumeblack font-bold text-xs">Value</label>
+                            <select name="cars" id="cars" class="bg-backgroundGreyThird mt-2 py-3 px-4 border rounded-lg select-class ">
+                                <option value="Promo 12.12" class="p-2">Promo 12.12</option>
+                                <option value="Rahmadan Sale">Rahmadan Sale</option>
+                            </select>
+                        </div>
+                        
+                        <div class="flex flex-col mt-5 w-full">
+                            <label for="" class="uppercase text-costumeblack font-bold text-xs">Satuan</label>
+                            <select name="cars" id="cars" class="bg-backgroundGreyThird mt-2 py-3 px-4 border rounded-lg select-class ">
+                                <option value="Promo 12.12" class="p-2">Promo 12.12</option>
+                                <option value="Rahmadan Sale">Rahmadan Sale</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <div class="flex flex-row">
+                        <button class="py-2.5 bg-buttonSecondary text-textButtonSecondary rounded w-[124px] text-xl mr-3">Cancel</button>
+                        <a href="grouplist.html"> 
+                            <button class="py-2.5 bg-primary text-white rounded w-[124px] text-xl">Next</button>
+                        </a>
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+      </div>
+
+  <script type="text/javascript">
+    function dropdown() {
+        document.querySelector("#menu").classList.toggle("active");
+        document.querySelector("#submenu").classList.toggle("hidden");
+        document.querySelector("#arrow").classList.toggle("rotate-0");
+    }
+  </script>
+</body>
+</html>
