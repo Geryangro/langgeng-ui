@@ -1,5 +1,23 @@
 {
   "devDependencies": {
     "tailwindcss": "^3.2.6"
-  }
+  },
+  "name": "login--langgeng",
+  "description": "Ui Langgeng",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Geryangro/langgeng-ui.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Geryangro/langgeng-ui/issues"
+  },
+  "homepage": "https://github.com/Geryangro/langgeng-ui#readme"
 }

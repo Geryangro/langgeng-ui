@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ['./src/**/*.{html,js}'],
   theme: {
     extend: {
       fontFamily: {
-        mulish: "'Mulish', sans-serif"
+        mulish: "'Mulish', sans-serif",
       },
       colors: {
         primary: '#F2994A',
@@ -20,9 +20,9 @@ module.exports = {
         backgroundGreyThird: '#F3F6FF',
         buttonSecondary: '#F2F2F2',
         textButtonSecondary: '#828282',
-        textSubMenu: '#9E9E9E'
-      }
+        textSubMenu: '#9E9E9E',
+      },
     },
   },
   plugins: [],
-}
+};
